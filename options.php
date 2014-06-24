@@ -20,7 +20,7 @@ function optionsframework_option_name() {
  * Defines an array of options that will be used to generate the settings page and be saved in the database.
  * When creating the 'id' fields, make sure to use all lowercase and no spaces.
  *
- * If you are making your theme translatable, you should replace 'html5reset'
+ * If you are making your theme translatable, you should replace 'themoment'
  * with the actual text domain for your theme.  Read more:
  * http://codex.wordpress.org/Function_Reference/load_theme_textdomain
  */
@@ -51,94 +51,35 @@ function optionsframework_options() {
 
 	$options = array();
 
+    // Footer
 	$options[] = array(
-		'name' => __('Header Meta', 'html5reset'),
+		'name' => __('Footer Content', 'themoment'),
 		'type' => 'heading');
-
-// Standard Meta
-	$options[] = array(
-		'name' => __('Head ID', 'html5reset'),
-		'desc' => __("", 'html5reset'),
-		'id' => 'meta_headid',
-		'std' => 'www-sitename-com',
+    $options[] = array(
+		'name' => __('Subscription Title', 'themoment'),
+		'id'   => 'footer_subscribe_title',
+		'std'  => 'Subscribe for Updates',
 		'type' => 'text');
 	$options[] = array(
-		'name' => __('Google Webmasters', 'html5reset'),
-		'desc' => __("Speaking of Google, don't forget to set your site up: <a href='http://google.com/webmasters' target='_blank'>http://google.com/webmasters</a>", 'html5reset'),
-		'id' => 'meta_google',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('Author Name', 'html5reset'),
-		'desc' => __('Populates meta author tag.', 'html5reset'),
-		'id' => 'meta_author',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('Mobile Viewport', 'html5reset'),
-		'desc' => __('Uncomment to use; use thoughtfully!', 'html5reset'),
-		'id' => 'meta_viewport',
-		'std' => 'width=device-width, initial-scale=1.0',
-		'type' => 'text');
-
-// App: Twitter
-	$options[] = array(
-		'name' => __('App: Twitter Card', 'html5reset'),
-		'desc' => __('twitter:card (summary, photo, gallery, product, app, player)', 'html5reset'),
-		'id' => 'meta_app_twt_card',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('twitter:site (@username of website)', 'html5reset'),
-		'id' => 'meta_app_twt_site',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __("twitter:title (the user's Twitter ID)", 'html5reset'),
-		'id' => 'meta_app_twt_title',
-		'std' => '',
-		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('twitter:description (maximum 200 characters)', 'html5reset'),
-		'id' => 'meta_app_twt_description',
-		'std' => '',
+		'name' => __('Subscription Description', 'themoment'),
+		'id'   => 'footer_subscribe_desc',
+		'std'  => "Sign up to keep up-to-date with future news and events related to The Moment You Can't Ignore.",
 		'type' => 'textarea');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('twitter:url (url for the content)', 'html5reset'),
-		'id' => 'meta_app_twt_url',
-		'std' => '',
+    $options[] = array(
+		'name' => __('Stay Connected - Email', 'themoment'),
+		'id'   => 'footer_stayconnected_email',
+		'std'  => '',
 		'type' => 'text');
-
-// App: Facebook
-	$options[] = array(
-		'name' => __('App: Facebook', 'html5reset'),
-		'desc' => __('og:title', 'html5reset'),
-		'id' => 'meta_app_fb_title',
-		'std' => '',
+    $options[] = array(
+		'name' => __('Stay Connected - Twitter', 'themoment'),
+		'id'   => 'footer_stayconnected_twitter',
+		'std'  => 'https://twitter.com/CFAR_INC',
 		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('og:description', 'html5reset'),
-		'id' => 'meta_app_fb_description',
-		'std' => '',
-		'type' => 'textarea');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('og:url', 'html5reset'),
-		'id' => 'meta_app_fb_url',
-		'std' => '',
+    $options[] = array(
+		'name' => __('Stay Connected - LinkedIn', 'themoment'),
+		'id'   => 'footer_stayconnected_linkedin',
+		'std'  => 'https://www.linkedin.com/company/cfar',
 		'type' => 'text');
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('og:image', 'html5reset'),
-		'id' => 'meta_app_fb_image',
-		'std' => '',
-		'type' => 'upload');
 
 	return $options;
-
 }

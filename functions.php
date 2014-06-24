@@ -6,27 +6,27 @@
 	}
 
 	// Theme Setup (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function html5reset_setup() {
-		load_theme_textdomain( 'html5reset', get_template_directory() . '/languages' );
+	function themoment_setup() {
+		load_theme_textdomain( 'themoment', get_template_directory() . '/languages' );
 		add_theme_support( 'automatic-feed-links' );	
 		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
-		register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
+		register_nav_menu( 'primary', __( 'Navigation Menu', 'themoment' ) );
 		add_theme_support( 'post-thumbnails' );
 	}
-	add_action( 'after_setup_theme', 'html5reset_setup' );
+	add_action( 'after_setup_theme', 'themoment_setup' );
 	
 	// Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function html5reset_scripts_styles() {
+	function themoment_scripts_styles() {
 		global $wp_styles;
 
 		// Load Comments	
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 			wp_enqueue_script( 'comment-reply' );
 	}
-	add_action( 'wp_enqueue_scripts', 'html5reset_scripts_styles' );
+	add_action( 'wp_enqueue_scripts', 'themoment_scripts_styles' );
 	
 	// WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function html5reset_wp_title( $title, $sep ) {
+	function themoment_wp_title( $title, $sep ) {
 		global $paged, $page;
 	
 		if ( is_feed() )
@@ -42,13 +42,13 @@
 	
 	// Add a page number if necessary.
 		if ( $paged >= 2 || $page >= 2 )
-			$title = "$title $sep " . sprintf( __( 'Page %s', 'html5reset' ), max( $paged, $page ) );
+			$title = "$title $sep " . sprintf( __( 'Page %s', 'themoment' ), max( $paged, $page ) );
 	
 		return $title;
 	}
-	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
+	add_filter( 'wp_title', 'themoment_wp_title', 10, 2 );
 
-	// Load jQuery
+	// Load/dequeue jQuery
 	if ( !function_exists( 'core_mods' ) ) {
 		function core_mods() {
 			if ( !is_admin() ) {
@@ -60,30 +60,8 @@
 		add_action( 'wp_enqueue_scripts', 'core_mods' );
 	}
 
-	// Clean up the <head>, if you so desire.
-	//	function removeHeadLinks() {
-	//    	remove_action('wp_head', 'rsd_link');
-	//    	remove_action('wp_head', 'wlwmanifest_link');
-	//    }
-	//    add_action('init', 'removeHeadLinks');
-
 	// Custom Menu
-	register_nav_menu( 'primary', __( 'Navigation Menu', 'html5reset' ) );
-
-	// Widgets
-	if ( function_exists('register_sidebar' )) {
-		function html5reset_widgets_init() {
-			register_sidebar( array(
-				'name'          => __( 'Sidebar Widgets', 'html5reset' ),
-				'id'            => 'sidebar-primary',
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			) );
-		}
-		add_action( 'widgets_init', 'html5reset_widgets_init' );
-	}
+	register_nav_menu( 'primary', __( 'Navigation Menu', 'themoment' ) );
 
 	// Navigation - update coming from twentythirteen
 	function post_navigation() {
@@ -104,26 +82,26 @@
 		);
 	}
 
-	add_action( 'init', 'register_cpt_project' );
-	function register_cpt_project() {
+	add_action( 'init', 'register_cpt_resource' );
+	function register_cpt_resource() {
 	    $labels = array( 
-	        'name' => _x( 'Projects', 'project' ),
-	        'singular_name' => _x( 'Project', 'project' ),
-	        'add_new' => _x( 'Add New', 'project' ),
-	        'add_new_item' => _x( 'Add New Project', 'project' ),
-	        'edit_item' => _x( 'Edit Project', 'project' ),
-	        'new_item' => _x( 'New Project', 'project' ),
-	        'view_item' => _x( 'View Project', 'project' ),
-	        'search_items' => _x( 'Search Projects', 'project' ),
-	        'not_found' => _x( 'No projects found', 'project' ),
-	        'not_found_in_trash' => _x( 'No projects found in Trash', 'project' ),
-	        'parent_item_colon' => _x( 'Parent Project:', 'project' ),
-	        'menu_name' => _x( 'Projects', 'project' ),
+	        'name' => _x( 'Resources', 'resource' ),
+	        'singular_name' => _x( 'Resource', 'resource' ),
+	        'add_new' => _x( 'Add New', 'resource' ),
+	        'add_new_item' => _x( 'Add New Resource', 'resource' ),
+	        'edit_item' => _x( 'Edit Resource', 'resource' ),
+	        'new_item' => _x( 'New Resource', 'resource' ),
+	        'view_item' => _x( 'View Resource', 'resource' ),
+	        'search_items' => _x( 'Search Resources', 'resource' ),
+	        'not_found' => _x( 'No resources found', 'resource' ),
+	        'not_found_in_trash' => _x( 'No resources found in Trash', 'resource' ),
+	        'parent_item_colon' => _x( 'Parent Resource:', 'resource' ),
+	        'menu_name' => _x( 'Resources', 'resource' ),
 	    );
 	    $args = array( 
 	        'labels' => $labels,
 	        'hierarchical' => false,
-	        'description' => 'All projects',
+	        'description' => 'All resources',
 	        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
 	        'taxonomies' => array( '' ),
 	        'public' => true,
@@ -140,29 +118,29 @@
 	        'rewrite' => true,
 	        'capability_type' => 'post'
 	    );
-	    register_post_type( 'project', $args );
+	    register_post_type( 'resource', $args );
 	}
 
-    add_action( 'init', 'register_cpt_people' );
-	function register_cpt_people() {
+    add_action( 'init', 'register_cpt_event' );
+	function register_cpt_event() {
 	    $labels = array( 
-	        'name' => _x( 'People', 'people' ),
-	        'singular_name' => _x( 'People', 'people' ),
-	        'add_new' => _x( 'Add New', 'people' ),
-	        'add_new_item' => _x( 'Add New Person', 'people' ),
-	        'edit_item' => _x( 'Edit Person', 'people' ),
-	        'new_item' => _x( 'New Person', 'people' ),
-	        'view_item' => _x( 'View Person', 'people' ),
-	        'search_items' => _x( 'Search People', 'people' ),
-	        'not_found' => _x( 'No people found', 'people' ),
-	        'not_found_in_trash' => _x( 'No people found in Trash', 'people' ),
-	        'parent_item_colon' => _x( 'Parent Person:', 'people' ),
-	        'menu_name' => _x( 'People', 'people' ),
+	        'name' => _x( 'Events', 'event' ),
+	        'singular_name' => _x( 'Event', 'event' ),
+	        'add_new' => _x( 'Add New', 'event' ),
+	        'add_new_item' => _x( 'Add New Event', 'event' ),
+	        'edit_item' => _x( 'Edit Event', 'event' ),
+	        'new_item' => _x( 'New Event', 'event' ),
+	        'view_item' => _x( 'View Event', 'event' ),
+	        'search_items' => _x( 'Search Events', 'event' ),
+	        'not_found' => _x( 'No events found', 'event' ),
+	        'not_found_in_trash' => _x( 'No events found in Trash', 'event' ),
+	        'parent_item_colon' => _x( 'Parent Event:', 'event' ),
+	        'menu_name' => _x( 'Events', 'event' ),
 	    );
 	    $args = array( 
 	        'labels' => $labels,
 	        'hierarchical' => false,
-	        'description' => 'All people',
+	        'description' => 'All events',
 	        'supports' => array( 'title', 'editor', 'thumbnail' ),
 	        'taxonomies' => array( '' ),
 	        'public' => true,
@@ -179,40 +157,11 @@
 	        'rewrite' => true,
 	        'capability_type' => 'post'
 	    );
-	    register_post_type( 'people', $args );
+	    register_post_type( 'event', $args );
 	}
 
-	add_action( 'init', 'register_taxonomy_featured' );
-	function register_taxonomy_featured() {
-	    $labels = array( 
-	        'name' => _x( 'Featured', 'featured' ),
-	        'singular_name' => _x( 'Featured', 'featured' ),
-	        'search_items' => _x( 'Search Featured', 'featured' ),
-	        'popular_items' => _x( 'Popular Featured', 'featured' ),
-	        'all_items' => _x( 'All Featured', 'featured' ),
-	        'parent_item' => _x( 'Parent Featured', 'featured' ),
-	        'parent_item_colon' => _x( 'Parent Featured:', 'featured' ),
-	        'edit_item' => _x( 'Edit Featured', 'featured' ),
-	        'update_item' => _x( 'Update Featured', 'featured' ),
-	        'add_new_item' => _x( 'Add New Featured', 'featured' ),
-	        'new_item_name' => _x( 'New Featured', 'featured' ),
-	        'separate_items_with_commas' => _x( 'Separate featured with commas', 'featured' ),
-	        'add_or_remove_items' => _x( 'Add or remove featured', 'featured' ),
-	        'choose_from_most_used' => _x( 'Choose from the most used featured', 'featured' ),
-	        'menu_name' => _x( 'Featured', 'featured' ),
-	    );
-	    $args = array( 
-	        'labels' => $labels,
-	        'public' => true,
-	        'show_in_nav_menus' => true,
-	        'show_ui' => true,
-	        'show_tagcloud' => true,
-	        'show_admin_column' => false,
-	        'hierarchical' => true,
-
-	        'rewrite' => true,
-	        'query_var' => true
-	    );
-	    register_taxonomy( 'featured', array('project'), $args );
-	}
+    function remove_editor() {
+        remove_post_type_support('page', 'editor');
+    }
+    add_action('admin_init', 'remove_editor');
 ?>
