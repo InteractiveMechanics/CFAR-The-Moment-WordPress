@@ -1,0 +1,12 @@
+// Partials: Typography
+
+html, body {
+	font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, li, div, 
+input, label {
+	font-family: $primary-font-face;
+    font-size: 1.4rem;
+}
