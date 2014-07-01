@@ -55,6 +55,11 @@
     }
     add_filter('excerpt_more', 'new_excerpt_more');
 
+    // Redirect after comment to main/referring page
+    function redirect_after_comment($location) {
+        return $_SERVER["HTTP_REFERER"] . '#success';
+    }
+    add_filter('comment_post_redirect', 'redirect_after_comment');
 
 	// Load/dequeue jQuery
 	if ( !function_exists( 'core_mods' ) ) {

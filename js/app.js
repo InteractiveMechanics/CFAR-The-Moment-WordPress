@@ -1,10 +1,10 @@
 $(document).ready(function(){ 
-    $('.carousel').carousel({
-        interval: 6000
-    });
+    var hash = window.location.hash;
+    console.log(hash);
 
-    $('#show-form').on('click', function() {
-        $(this).hide();
-        $(this).parent().next().removeClass('hidden');
-    });
+    if(hash === '#add-a-moment') {
+        $(hash).modal('show');
+    } else if(hash === '#success') {
+        $(hash).show();
+    }
 });
