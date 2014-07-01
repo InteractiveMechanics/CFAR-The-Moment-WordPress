@@ -4,9 +4,58 @@ html, body {
 	font-size: 62.5%;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4,
 p, ol, ul, li, div, 
 input, label {
 	font-family: $primary-font-face;
     font-size: 1.4rem;
+}
+
+h1 {
+    font-family: $primary-font-face;
+    font-size: 4.2rem;
+    font-weight: 900;
+    color: $cfar-black;
+    letter-spacing: 0.2px;
+}
+h2 {
+    font-family: $primary-font-face;
+    font-size: 3rem;
+    font-weight: 900;
+    color: $cfar-darkblue;
+    letter-spacing: 0.2px;
+}
+h3 {
+    font-family: $primary-font-face;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: $cfar-black;
+    letter-spacing: 0.2px;
+
+    a.view-all {
+        font-family: $secondary-font-face;
+        font-size: 1.8rem;
+        font-style: italic;
+        color: $cfar-textblue;
+        margin-left: 10px;
+        text-transform: lowercase;
+    }
+}
+h4 {
+    font-family: $primary-font-face;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: $cfar-black;
+}
+h5 {
+    font-family: $secondary-font-face;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: $cfar-black;
+}
+h6 {
+    font-family: $secondary-font-face;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $cfar-midgray;
 }

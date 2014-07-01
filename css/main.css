@@ -1,38 +1,194 @@
-input[type="checkbox"].css-checkbox {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0; }
-  input[type="checkbox"].css-checkbox:checked + label.css-label {
-    background-position: 0 -20px; }
-  input[type="checkbox"].css-checkbox + label.css-label {
-    padding-left: 25px;
-    height: 20px;
-    display: inline-block;
-    line-height: 20px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    font-size: 12px;
-    font-weight: 700;
-    vertical-align: middle;
-    cursor: pointer; }
-
-.css-label {
-  background-image: url(http://csscheckbox.com/checkboxes/web-two-style.png); }
-
 html,
 body {
   min-height: 100%; }
 
+hr.divider {
+  width: 183px;
+  height: 14px;
+  display: block;
+  margin: 30px auto;
+  border: none;
+  background: url("../images/divider@2x.png");
+  background-size: 100%; }
+
 html, body {
   font-size: 62.5%; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4,
 p, ol, ul, li, div,
 input, label {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.4rem; }
+
+h1 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: #231f20;
+  letter-spacing: 0.2px; }
+
+h2 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1a2554;
+  letter-spacing: 0.2px; }
+
+h3 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #231f20;
+  letter-spacing: 0.2px; }
+  h3 a.view-all {
+    font-family: "Volkhov", "Georgia", serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #1b75bb;
+    margin-left: 10px;
+    text-transform: lowercase; }
+
+h4 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #231f20; }
+
+h5 {
+  font-family: "Volkhov", "Georgia", serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #231f20; }
+
+h6 {
+  font-family: "Volkhov", "Georgia", serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #808284; }
+
+header nav.navbar {
+  border-radius: 0;
+  background: #4e84bf;
+  border: none;
+  min-height: 70px;
+  margin-bottom: 0; }
+  header nav.navbar .navbar-header .navbar-brand {
+    text-indent: -9999px;
+    background-image: url("../images/logo-md@2x.png");
+    background-size: 100%;
+    width: 550px;
+    height: 38px;
+    margin: 14px 0 0 16px; }
+    @media (max-width: 991px) {
+      header nav.navbar .navbar-header .navbar-brand {
+        background-image: url("../images/logo-xs@2x.png");
+        width: 160px;
+        height: 48px;
+        margin: 10px 0 0 16px; } }
+  header nav.navbar .navbar-nav {
+    margin-right: 0px !important; }
+    header nav.navbar .navbar-nav > li > a {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      padding-top: 24px;
+      padding-bottom: 26px;
+      color: white;
+      opacity: 0.65;
+      transition: all 0.5s; }
+      header nav.navbar .navbar-nav > li > a:hover {
+        opacity: 1; }
+    header nav.navbar .navbar-nav > li.current-menu-item > a {
+      color: white;
+      opacity: 1; }
+
+section.stay-connected {
+  background: #4e84bf;
+  padding: 40px 0;
+  position: relative; }
+  section.stay-connected:before {
+    content: '';
+    border-top: 16px solid white;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    top: 0;
+    left: 50%;
+    position: absolute;
+    margin-left: -8px; }
+  section.stay-connected h3 {
+    margin: 0 0 10px;
+    color: white; }
+  section.stay-connected p {
+    color: white; }
+  section.stay-connected ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    section.stay-connected ul li a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+      transition: all 0.5s; }
+      section.stay-connected ul li a:hover {
+        color: #1a2554; }
+        section.stay-connected ul li a:hover i {
+          background-color: #1a2554; }
+      section.stay-connected ul li a i {
+        background-color: white;
+        border-radius: 999px;
+        color: #4e84bf;
+        height: 26px;
+        width: 26px;
+        display: inline-block;
+        padding: 3px 4px;
+        position: relative;
+        margin-right: 6px;
+        transition: all 0.5s; }
+        section.stay-connected ul li a i.icon-cfar {
+          text-transform: none;
+          line-height: 1em;
+          background-image: url("../images/cfar-icon@2x.png");
+          background-size: 100%;
+          top: 6px; }
+  section.stay-connected #mc_embed_signup input[type="email"] {
+    border: none;
+    border-radius: 0;
+    font-style: italic; }
+  section.stay-connected #mc_embed_signup input[type="submit"] {
+    border: 1px solid #1a2554;
+    background: #1a2554;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 0;
+    transition: all 0.5s; }
+    section.stay-connected #mc_embed_signup input[type="submit"]:hover {
+      border: 1px solid #fcb514;
+      background: #fcb514; }
+
+footer {
+  padding: 25px 0; }
+  footer .footer-logo {
+    width: 200px;
+    height: 40px;
+    background: url("../images/cfar@2x.png");
+    background-size: 100%;
+    display: block; }
+  footer p {
+    font-size: 1.2rem;
+    color: #a7a8aa; }
+    footer p strong {
+      margin-right: 5px; }
+    footer p a {
+      color: #a7a8aa; }
+
+.homepage-hero {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  position: relative;
+  margin-top: -70px;
+  padding-top: 70px; }
+  .homepage-hero img.book-cover {
+    max-width: 100%; }

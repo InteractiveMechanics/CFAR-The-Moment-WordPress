@@ -48,6 +48,14 @@
 	}
 	add_filter( 'wp_title', 'themoment_wp_title', 10, 2 );
 
+    // Change the excerpt "read more" tags
+    function new_excerpt_more($more) {
+        global $post;
+        return '<a class="read-more" href="'. get_permalink($post->ID) . '">Read more&nbsp;&nbsp;&raquo;</a>';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
+
+
 	// Load/dequeue jQuery
 	if ( !function_exists( 'core_mods' ) ) {
 		function core_mods() {
@@ -73,12 +81,9 @@
 
 	// Posted On
 	function posted_on() {
-		printf( __( '<span class="sep">Posted </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a> by <span class="byline author vcard">%5$s</span>', '' ),
-			esc_url( get_permalink() ),
+		printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time></a>', '' ),
 			esc_attr( get_the_time() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_author() )
+			esc_attr( get_the_date() )
 		);
 	}
 

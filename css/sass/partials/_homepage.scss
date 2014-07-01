@@ -1,1 +1,15 @@
 // Partials: Homepage
+
+.homepage-hero {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    position: relative;
+    margin-top: -70px;
+    padding-top: 70px;
+
+    img.book-cover {
+        max-width: 100%;
+    }
+}

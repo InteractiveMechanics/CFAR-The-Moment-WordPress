@@ -1,6 +1,6 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
-<head id="<?php echo of_get_option('meta_headid'); ?>">
+<head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -8,13 +8,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<![endif]-->
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 	<meta name="Copyright" content="Copyright &copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
-
-	<?php if (is_search()) echo '<meta name="robots" content="noindex, nofollow" />'; ?>	
-	<?php if (true == of_get_option('meta_author')) echo '<meta name="author" content="'.of_get_option("meta_author").'" />'; ?>
-	<?php if (true == of_get_option('meta_google')) echo '<meta name="google-site-verification" content="'.of_get_option("meta_google").'" />'; ?>
-	<?php if (true == of_get_option('meta_viewport')) { echo '<meta name="viewport" content="'.of_get_option("meta_viewport").'" />'; } ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
 	<title><?php wp_title(' - ', true, 'right'); ?></title>
 
@@ -32,23 +29,6 @@
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/icons/32_favicon.png" sizes="32x32" />
 	<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/icons/favicon.ico" sizes="16x16" />
 
-	<?php if (true == of_get_option('meta_app_twt_card')) {
-		echo '<!-- Twitter -->';
-		echo '<meta name="twitter:card" content="'.of_get_option("meta_app_twt_card").'" />';
-		echo '<meta name="twitter:site" content="'.of_get_option("meta_app_twt_site").'" />';
-		echo '<meta name="twitter:title" content="'.of_get_option("meta_app_twt_title").'">';
-		echo '<meta name="twitter:description" content="'.of_get_option("meta_app_twt_description").'" />';
-		echo '<meta name="twitter:url" content="'.of_get_option("meta_app_twt_url").'" />';
-	} ?>
-
-	<?php if (true == of_get_option('meta_app_fb_title')) {
-		echo '<!-- Facebook -->';
-		echo '<meta property="og:title" content="'.of_get_option("meta_app_fb_title").'" />';
-		echo '<meta property="og:description" content="'.of_get_option("meta_app_fb_description").'" />';
-		echo '<meta property="og:url" content="'.of_get_option("meta_app_fb_url").'" />';
-		echo '<meta property="og:image" content="'.of_get_option("meta_app_fb_image").'" />';
-	} ?>
-
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -57,40 +37,35 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
 
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-48748714-1']);
-    _gaq.push(['_trackPageview']);
-    
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-48748714-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
 
 	<?php wp_head(); ?>
-
 </head>
 <body <?php body_class(); ?>>
 <div id="wrapper" <?php if(is_front_page()){ echo 'class="homepage"'; } ?>>
 	<header role="header">
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-nav">
-                        <span class="sr-only">Menu</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span>Menu</span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+                    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <?php bloginfo( 'name' ); ?>
+                    </a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="primary-nav">
                     <?php wp_nav_menu( array('menu' => 'primary', 'menu_class' => 'nav navbar-nav navbar-right') ); ?>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 	</header>

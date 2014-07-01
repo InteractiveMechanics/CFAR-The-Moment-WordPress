@@ -1,16 +1,28 @@
 // Colors
-$cfar-midblue           : #4E84BF;
+
+$cfar-lightblue         : #75A0CD;  // Homepage unignorable moment section
+$cfar-textblue          : #1B75BB;  // Lighter text "view all" headers
+$cfar-midblue           : #4E84BF;  // Header
+$cfar-darkblue          : #1A2554;  // Testimonials
+
+$cfar-lightorange       : #FCB514;  // Buttons
+$cfar-orange            : #EF8A22;  // Book cover
+
+$cfar-lightgray         : #F1F1F2;  // Accent
+$cfar-midgray           : #808284;  // All over the place, body copy
+$cfar-black             : #231F20;  // Text headlines
 
 // Media Queries
 $screen-xs			    : "(max-width: 767px)";
 $screen-gtxs            : "(min-width: 768px)";
 $screen-sm			    : "(min-width: 768px) and (max-width: 991px)";
+$screen-ltsm            : "(max-width: 991px)";
 $screen-md			    : "(min-width: 992px) and (max-width: 1199px)";
 $screen-lg			    : "(min-width: 1200px)";
 
 // Fonts
 $primary-font-face 	    : 'Open Sans', 'Helvetica Neue', sans-serif;
-$secondary-font-face 	: 'Open Sans', 'Helvetica Neue', sans-serif;
+$secondary-font-face 	: 'Volkhov', 'Georgia', serif;
 
 // Transitions
 $transition             : "all 0.5s";

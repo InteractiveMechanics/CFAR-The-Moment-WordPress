@@ -1,1 +1,115 @@
 // Partials: Footer
+
+section.stay-connected {
+    background: $cfar-midblue;
+    padding: 40px 0;
+    position: relative;
+
+    &:before {
+        content: '';
+        border-top: 16px solid white;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+        top: 0;
+        left: 50%;
+        position: absolute;
+        margin-left: -8px;
+    }
+    
+    h3 {
+        margin: 0 0 10px;
+        color: white;
+    }
+    p {
+        color: white;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+                margin-bottom: 10px;
+                display: inline-block;
+                transition: #{$transition};
+
+                &:hover {
+                    color: $cfar-darkblue;
+
+                    i {
+                        background-color: $cfar-darkblue;
+                    }
+                }
+
+                i {
+                    background-color: white;
+                    border-radius: 999px;
+                    color: $cfar-midblue;
+                    height: 26px;
+                    width: 26px;
+                    display: inline-block;
+                    padding: 3px 4px;
+                    position: relative;
+                    margin-right: 6px;
+                    transition: #{$transition};
+
+                    &.icon-cfar {
+                        text-transform: none;
+                        line-height: 1em;
+                        background-image: url('../images/cfar-icon@2x.png');
+                        background-size: 100%;
+                        top: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    #mc_embed_signup {
+        input[type="email"] {
+            border: none;
+            border-radius: 0;
+            font-style: italic;
+        }
+        input[type="submit"] {
+            border: 1px solid $cfar-darkblue;
+            background: $cfar-darkblue;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 0;
+            transition: #{$transition};
+            
+            &:hover {
+                border: 1px solid $cfar-lightorange;
+                background: $cfar-lightorange;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 25px 0;
+
+    .footer-logo {
+        width: 200px;
+        height: 40px;
+        background: url('../images/cfar@2x.png');
+        background-size: 100%;
+        display: block;
+    }
+    p {
+        font-size: 1.2rem;
+        color: lighten($cfar-midgray, 15%);
+
+        strong {
+            margin-right: 5px;
+        }
+        a {
+            color: lighten($cfar-midgray, 15%);
+        }
+    }
+}

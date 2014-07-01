@@ -4,16 +4,11 @@
 <div class="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-sm-10 col-sm-offset-1">
+                <h6><?php posted_on(); ?></h6>
                 <h2><?php the_title(); ?></h2>
-                <div class="entry">
-                    <?php the_content(); ?>
-                    <?php wp_link_pages(array('before' => __('Pages: '), 'next_or_number' => 'number')); ?>
-                </div>
+                <?php the_content(); ?>
                 <?php post_navigation(); ?>
-            </div>
-            <div class="col-md-3">
-                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>
