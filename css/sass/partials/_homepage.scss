@@ -46,4 +46,58 @@
         text-align: center;
         margin-bottom: 25px;
     }
+
+    .about-image {
+        margin: 20px auto 30px;
+        position: relative;
+
+        > img {
+            max-width: 200px;
+            display: block;
+            margin: 20px auto 30px;
+        }
+    }
+}
+
+.homepage-moments {
+    padding: 80px 0;
+    background: $cfar-lightblue;
+    color: white;
+}
+.homepage-testimonials {
+    padding: 80px 0;
+    background: $cfar-darkblue;
+    color: white;
+}
+
+.homepage-resources {
+    padding: 100px 0;
+
+    h3 {
+        color: $cfar-darkblue;
+        margin-bottom: 25px;
+    }
+    h4 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+    h5 {
+        text-align: center;
+        margin: 20px 0;
+    }
+    h6 {
+        color: lighten($cfar-midgray, 15%);
+    }
+
+    .vr {
+        border-left: 1px solid $cfar-lightgray;
+        padding: 2px 0 2px 40px;
+
+        h4 {
+            font-size: 2.1rem;
+            line-height: 2.7rem;
+
+            a { color: $cfar-black; }
+        }
+    }
 }

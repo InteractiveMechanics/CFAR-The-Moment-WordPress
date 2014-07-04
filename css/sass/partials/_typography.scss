@@ -34,10 +34,11 @@ h3 {
 
     a.view-all {
         font-family: $secondary-font-face;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-style: italic;
+        letter-spacing: -0.5px;
         color: $cfar-textblue;
-        margin-left: 10px;
+        margin-left: 6px;
         text-transform: lowercase;
     }
 }
@@ -49,13 +50,39 @@ h4 {
 }
 h5 {
     font-family: $secondary-font-face;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: $cfar-black;
 }
 h6 {
     font-family: $secondary-font-face;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
     text-transform: uppercase;
     color: $cfar-midgray;
+}
+
+p {
+    font-family: $primary-font-face;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.4rem;
+    color: $cfar-midgray;
+}
+a {
+    opacity: 1;
+    transition: #{$transition};
+    
+    &:hover {
+        text-decoration: none;
+        opacity: 0.65;
+    }
+    &.underline {
+        border-bottom: 1px dashed $cfar-midblue;
+    }
+    &.text-center {
+        display: inline-block;
+    }
 }

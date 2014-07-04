@@ -6,7 +6,7 @@ hr.divider {
   width: 183px;
   height: 14px;
   display: block;
-  margin: 30px auto;
+  margin: 60px auto;
   border: none;
   background: url("../images/divider@2x.png");
   background-size: 100%; }
@@ -42,10 +42,11 @@ h3 {
   letter-spacing: 0.2px; }
   h3 a.view-all {
     font-family: "Volkhov", "Georgia", serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-style: italic;
+    letter-spacing: -0.5px;
     color: #1b75bb;
-    margin-left: 10px;
+    margin-left: 6px;
     text-transform: lowercase; }
 
 h4 {
@@ -56,15 +57,36 @@ h4 {
 
 h5 {
   font-family: "Volkhov", "Georgia", serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   color: #231f20; }
 
 h6 {
   font-family: "Volkhov", "Georgia", serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.2px;
   text-transform: uppercase;
   color: #808284; }
+
+p {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  color: #808284; }
+
+a {
+  opacity: 1;
+  transition: all 0.5s; }
+  a:hover {
+    text-decoration: none;
+    opacity: 0.65; }
+  a.underline {
+    border-bottom: 1px dashed #4e84bf; }
+  a.text-center {
+    display: inline-block; }
 
 header nav.navbar {
   border-radius: 0;
@@ -214,3 +236,42 @@ footer {
   .homepage-about h5 {
     text-align: center;
     margin-bottom: 25px; }
+  .homepage-about .about-image {
+    margin: 20px auto 30px;
+    position: relative; }
+    .homepage-about .about-image > img {
+      max-width: 200px;
+      display: block;
+      margin: 20px auto 30px; }
+
+.homepage-moments {
+  padding: 80px 0;
+  background: #75a0cd;
+  color: white; }
+
+.homepage-testimonials {
+  padding: 80px 0;
+  background: #1a2554;
+  color: white; }
+
+.homepage-resources {
+  padding: 100px 0; }
+  .homepage-resources h3 {
+    color: #1a2554;
+    margin-bottom: 25px; }
+  .homepage-resources h4 {
+    font-size: 2.4rem;
+    line-height: 3rem; }
+  .homepage-resources h5 {
+    text-align: center;
+    margin: 20px 0; }
+  .homepage-resources h6 {
+    color: #a7a8aa; }
+  .homepage-resources .vr {
+    border-left: 1px solid #f1f1f2;
+    padding: 2px 0 2px 40px; }
+    .homepage-resources .vr h4 {
+      font-size: 2.1rem;
+      line-height: 2.7rem; }
+      .homepage-resources .vr h4 a {
+        color: #231f20; }

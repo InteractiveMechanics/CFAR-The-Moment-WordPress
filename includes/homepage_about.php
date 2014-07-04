@@ -10,18 +10,26 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <?php if( have_rows('about_mal') ): while( have_rows('about_mal') ): the_row(); ?>
-                            <img src="<?php the_sub_field('image'); ?>" alt="Malachi O'Connor" />
+                            <div class="about-image">
+                                <img src="<?php the_sub_field('image'); ?>" alt="Malachi O'Connor" />
+                            </div>
                             <h5>Mal O'Connor</h5>
                             <p><?php the_sub_field('bio'); ?></p>
-                            <a href="<?php the_sub_field('linkedin'); ?>" target="_blank">Connect with Mal on LinkedIn&nbsp;&nbsp;&raquo;</a>
+                            <p class="text-center">
+                                <a href="<?php the_sub_field('linkedin'); ?>" class="underline" target="_blank">Connect with Mal on LinkedIn&nbsp;&nbsp;&raquo;</a>
+                            </p>
                         <?php endwhile; endif; ?>
                     </div>
                     <div class="col-sm-6">
                         <?php if( have_rows('about_barry') ): while( have_rows('about_barry') ): the_row(); ?>
-                            <img src="<?php the_sub_field('image'); ?>" alt="Barry Dornfeld" />
+                            <div class="about-image">
+                                <img src="<?php the_sub_field('image'); ?>" alt="Barry Dornfeld" />
+                            </div>
                             <h5>Barry Dornfeld</h5>
                             <p><?php the_sub_field('bio'); ?></p>
-                            <a href="<?php the_sub_field('linkedin'); ?>" target="_blank">Connect with Barry on LinkedIn&nbsp;&nbsp;&raquo;</a>
+                            <p class="text-center">
+                                <a href="<?php the_sub_field('linkedin'); ?>" class="underline" target="_blank">Connect with Barry on LinkedIn&nbsp;&nbsp;&raquo;</a>
+                            </p>
                         <?php endwhile; endif; ?>
                     </div>
                 </div>

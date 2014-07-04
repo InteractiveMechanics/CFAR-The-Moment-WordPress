@@ -3,7 +3,7 @@
 		<div class="row">
             <div class="col-sm-12">
                 <div class="row">
-                    <div class="col-sm-7">
+                    <div class="col-sm-7 col-md-6 col-md-offset-1">
                         <h3>News 
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>news" class="view-all">view all &raquo;</a>
                         </h3>
@@ -29,22 +29,24 @@
                                 ?>
                             </h6>
                             <h4><?php the_title(); ?></h4>
-                            <p><?php the_content(); ?></p>
+                            <?php the_content(); ?>
                         <?php endforeach; wp_reset_postdata();?>
                     </div>
-                    <div class="col-sm-4 col-sm-offset-1">
-                        <h3>Resources 
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>what-to-do" class="view-all">view all &raquo;</a>
-                        </h3>
-                        <?php 
-                            $resourceArgs = array(
-                                'number_of_posts' => 3,
-                                'post_type' => 'resource' ); 
-                            $resources = get_posts( $resourceArgs );
-                            foreach ( $resources as $post ) : setup_postdata( $post ); ?>
-                            <h6><?php the_field('author'); ?></h6>
-                            <h4><a href="<?php the_field('resource_url'); ?>" target="_blank"><?php the_title(); ?></a></h4>
-                        <?php endforeach; wp_reset_postdata();?>
+                    <div class="col-sm-5 col-md-4">
+                        <div class="vr">
+                            <h3>Resources 
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>what-to-do" class="view-all">view all &raquo;</a>
+                            </h3>
+                            <?php 
+                                $resourceArgs = array(
+                                    'number_of_posts' => 3,
+                                    'post_type' => 'resource' ); 
+                                $resources = get_posts( $resourceArgs );
+                                foreach ( $resources as $post ) : setup_postdata( $post ); ?>
+                                <h6><?php the_field('author'); ?></h6>
+                                <h4><a href="<?php the_field('resource_url'); ?>" target="_blank"><?php the_title(); ?></a></h4>
+                            <?php endforeach; wp_reset_postdata();?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,7 +55,9 @@
                     <hr class="divider">
                     <h5>About CFAR</h5>
                     <p><?php the_sub_field('description'); ?></p>
-                    <a href="<?php the_sub_field('link'); ?>" target="_blank">Learn more about CFAR</a>
+                    <p class="text-center">
+                        <a href="<?php the_sub_field('link'); ?>" class="underline" target="_blank">Learn more about CFAR</a>
+                    </p>
                 </div>
             <?php endwhile; endif; ?>
 		</div>

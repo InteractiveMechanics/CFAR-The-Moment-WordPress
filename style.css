@@ -7,7 +7,7 @@ Author URI: http://www.interactivemechanics.com
 Version: 1.0
 */
 
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800,700|Volkhov:400,400italic');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,800italic,400,800,700|Volkhov:400,400italic');
 @import url('css/vendor/bootstrap.min.css');
 @import url('css/vendor/fontello.css');
 @import url('css/main.css');
