@@ -2,6 +2,7 @@
     <div class="container">
 		<div class="row">
             <div class="col-sm-8 col-sm-offset-2">
+                <h5>About the Book</h5>
                 <?php the_field('about_the_book'); ?>
                 <hr class="divider">
             </div>

@@ -23,7 +23,7 @@
                             $content = $comment->comment_content;
                         ?>
                         <img src="<?php echo $image; ?>" alt="<?php echo $author; ?>" />
-                        <p><?php echo $content; ?></p>
+                        <p class="moment"><?php echo $content; ?></p>
                 <?php endforeach; ?>
             </div>
         </div>

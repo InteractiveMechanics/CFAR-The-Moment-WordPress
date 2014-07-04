@@ -3,13 +3,47 @@
 .homepage-hero {
     background-image: url('../images/background.jpg');
     background-size: cover;
-    height: 600px;
+    height: 550px;
     width: 100%;
     position: relative;
     margin-top: -70px;
     padding-top: 70px;
 
     img.book-cover {
-        max-width: 100%;
+        max-width: 90%;
+        margin-top: 50px;
+    }
+    h1 {
+        margin-top: 100px;
+    }
+
+    .quote {
+        margin: 0;
+    }
+    .quote-container {
+        position: relative;
+
+        .quote {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: #{$transition};
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+    .buttons {
+        margin-top: 90px;
+    }
+}
+
+.homepage-about {
+    padding: 100px 0;
+
+    h5 {
+        text-align: center;
+        margin-bottom: 25px;
     }
 }

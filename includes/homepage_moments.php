@@ -19,7 +19,7 @@
                             $content = $comment->comment_content;
                         ?>
                         <img src="<?php echo $image; ?>" alt="<?php echo $author; ?>" />
-                        <p><?php echo $content; ?></p>
+                        <p class="moment"><?php echo $content; ?></p>
                 <?php endforeach; ?>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments">Read all "Unignorable Moments"</a>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments/#add-a-moment">+&nbsp;&nbsp;Add a Moment</a>
