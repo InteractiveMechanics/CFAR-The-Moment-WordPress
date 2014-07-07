@@ -3,7 +3,7 @@
 		<div class="row">
             <div class="col-sm-12">
                 <div class="row">
-                    <div class="col-sm-7 col-md-6 col-md-offset-1">
+                    <div class="col-sm-7 col-md-5 col-md-offset-1 col-lg-6 col-lg-offset-1">
                         <h3>News 
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>news" class="view-all">view all &raquo;</a>
                         </h3>
@@ -32,7 +32,7 @@
                             <?php the_content(); ?>
                         <?php endforeach; wp_reset_postdata();?>
                     </div>
-                    <div class="col-sm-5 col-md-4">
+                    <div class="col-sm-5 col-md-5 col-lg-4">
                         <div class="vr">
                             <h3>Resources 
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>what-to-do" class="view-all">view all &raquo;</a>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <?php if( have_rows('about_cfar') ): while( have_rows('about_cfar') ): the_row(); ?>
-		        <div class="col-sm-8 col-sm-offset-2">
+		        <div class="col-sm-12 col-md-8 col-md-offset-2">
                     <hr class="divider">
                     <h5>About CFAR</h5>
                     <p><?php the_sub_field('description'); ?></p>

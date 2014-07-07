@@ -36,10 +36,12 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-md-3">
-                    <a href="http://www.cfar.com" class="footer-logo" target="_blank"></a>
+                <div class="col-sm-3 col-md-3">
+                    <a href="http://www.cfar.com" class="footer-logo" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/cfar@2x.png" alt="CFAR" />
+                    </a>
                 </div>
-                <div class="col-sm-8 col-md-9">
+                <div class="col-sm-9 col-md-9">
                     <p>
                         <strong>PHILADELPHIA</strong> Four Penn Center, 1600 John F. Kennedy Boulevard, Suite 600, Philadelphia, PA 19103 / <a href="tel:2153203200">215.320.3200</a>
                         <br>

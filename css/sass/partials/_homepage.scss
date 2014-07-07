@@ -1,13 +1,20 @@
 // Partials: Homepage
 
 .homepage-hero {
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/background1.jpg');
     background-size: cover;
-    height: 550px;
+    height: 530px;
     width: 100%;
     position: relative;
     margin-top: -70px;
     padding-top: 70px;
+
+    @media #{$screen-md} {
+        height: 450px;
+    }
+    @media #{$screen-sm} {
+        height: 440px;
+    }
 
     img.book-cover {
         max-width: 90%;
@@ -15,6 +22,17 @@
     }
     h1 {
         margin-top: 100px;
+        color: white;
+        text-shadow: 0 0 8px rgba(0,0,0,0.35);
+        line-height: 5.2rem;
+
+        @media #{$screen-md} {
+            font-size: 3.6rem;
+        }
+        @media #{$screen-sm} {
+            font-size: 3.6rem;
+            margin-top: 80px;
+        }
     }
 
     .quote {
@@ -36,6 +54,76 @@
     }
     .buttons {
         margin-top: 90px;
+
+        @media #{$screen-sm} {
+            margin-top: 70px;
+        }
+
+        .sod_select {
+            width: 220px;
+            padding: 17px 25px;
+            border: none;
+            background: $cfar-lightorange;
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: left;
+            text-transform: none;
+            cursor: pointer;
+            margin-right: 8px;
+            line-height: 1.33;
+            transition: #{$transition};
+
+            &:before {
+                top: 16px;
+                right: 16px;
+            }
+            &:after {
+                bottom: 16px;
+                right: 16px;
+            }
+            &:hover, &:focus {
+                background: $cfar-orange;
+            }
+            
+            .sod_label {
+                font-size: 1.6rem;
+            }
+        }
+        .sod_list {
+            background: $cfar-lightorange;
+            border: none;
+            width: 220px;
+            margin-top: 5px;
+            left: 3px;
+
+            li {
+                color: white;
+                font-weight: 700;
+                padding: 12px;
+                font-size: 1.6rem;
+                cursor: pointer;
+
+                &.selected {
+                    font-weight: 700;
+                }
+                &:hover,
+                &.active {
+                    background: $cfar-orange;
+                }
+            }
+        }
+
+        .btn-lg {
+            padding: 17px 25px;
+            font-size: 1.6rem;
+            margin-top: -14px;
+
+            &:hover {
+                opacity: 1;
+                background: $cfar-orange;
+            }
+        }
     }
 }
 
@@ -57,21 +145,194 @@
             margin: 20px auto 30px;
         }
     }
+    .author-video {
+        position: relative;
+        margin-top: 40px;
+        display: block;
+        margin-bottom: -100px;
+
+        img {
+            max-width: 100%;
+        }
+        h3 {
+            position: absolute;
+            color: white;
+            top: 40%;
+            text-align: center;
+            width: 100%;        
+        }
+    }
 }
 
 .homepage-moments {
     padding: 80px 0;
     background: $cfar-lightblue;
     color: white;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -16px;
+        left: 0;
+        right: 50%;
+        height: 16px;
+        border-right: transparent 16px solid;
+        border-bottom: $cfar-lightblue 16px solid;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: -16px;
+        right: 0;
+        left: 50%;
+        height: 16px;
+        border-left: transparent 16px solid;
+        border-bottom: $cfar-lightblue 16px solid;
+    }
+
+    h3 {
+        color: white;
+        margin-bottom: 25px;
+    }
+    p {
+        color: white;
+    }
+    a {
+        color: white;
+
+        &.underline {
+            border-bottom-color: white;
+        }
+    }
 }
 .homepage-testimonials {
     padding: 80px 0;
     background: $cfar-darkblue;
     color: white;
+
+    .carousel-inner {
+        .item {
+            padding: 0 20% 40px;
+
+            @media #{$screen-sm} {
+                padding: 0 15% 40px;
+            }
+
+            h5 > p {
+                font-family: $secondary-font-face;
+                font-size: 2.4rem;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 3.6rem;
+                letter-spacing: -0.3px;
+                color: white;
+                text-transform: none;
+                margin-bottom: 15px;
+                
+                @media #{$screen-sm} {
+                    font-size: 2.1rem;
+                    margin-bottom: 20px;
+                }
+
+                strong {
+                    font-size: 2.4rem;
+                    color: $cfar-lightorange;
+
+                    @media #{$screen-sm} {
+                        font-size: 2.1rem;
+                    }
+                }
+            }
+            > strong {
+                font-weight: 700;
+                font-size: 2.1rem;
+                margin-bottom: 5px;
+                margin-left: 30%;
+
+                @media #{$screen-sm} {
+                    font-size: 1.8rem;
+                    line-height: 3.6rem;
+                }
+            }
+            > p {
+                font-size: 1.4rem;
+                color: $cfar-lightblue;
+                margin-left: 30%;
+                
+                @media #{$screen-sm} {
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+    .carousel-control {
+        background: none;
+        width: 60px;
+        opacity: 0.35;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        > i {
+            font-size: 4.2rem;
+            top: 30%;
+            position: absolute;
+            right: 0;
+        }
+    }
+    .video {
+        &:hover {
+            opacity: 1;
+
+            &:after {
+                opacity: 0.75;
+            }
+        }
+        &:after {
+            content: '\e89c';
+            font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            margin-right: .2em;
+            text-align: center;
+            font-size: 7.2rem;
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            color: white;
+            opacity: 0.35;
+            top: 80px;
+            transition: #{$transition};
+            
+            @media #{$screen-md} {
+                top: 65px;
+            }
+            @media #{$screen-sm} {
+                top: 48px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            margin-bottom: -150px;
+            margin-top: 20px;
+        }
+    }
+
+    hr {
+        border-top: 1px solid rgba(white, 0.35);
+    }
 }
 
 .homepage-resources {
-    padding: 100px 0;
+    padding: 140px 0 100px;
 
     h3 {
         color: $cfar-darkblue;

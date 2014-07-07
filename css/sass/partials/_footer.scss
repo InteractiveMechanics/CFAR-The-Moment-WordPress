@@ -95,15 +95,18 @@ footer {
     padding: 25px 0;
 
     .footer-logo {
-        width: 200px;
-        height: 40px;
-        background: url('../images/cfar@2x.png');
-        background-size: 100%;
-        display: block;
+        > img {
+            max-width: 200px;
+            width: 100%;
+        }
     }
     p {
         font-size: 1.2rem;
         color: lighten($cfar-midgray, 15%);
+
+        @media #{$screen-sm} {
+            line-height: 1.8rem;
+        }
 
         strong {
             margin-right: 5px;

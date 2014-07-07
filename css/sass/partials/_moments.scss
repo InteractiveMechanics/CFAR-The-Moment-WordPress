@@ -1,0 +1,39 @@
+// Partials: Moments
+
+.moments {
+    margin: 20px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(white, 0.5);
+
+    &.moment-page {
+        padding-top: 25px;
+        border-top: 1px solid $cfar-lightgray;
+
+        .moment-container {
+            border-bottom: 1px solid $cfar-lightgray;
+            padding: 0 25px 25px;
+
+            &:last-of-type {
+                border: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            img {
+                border: none;
+            }
+        }
+    }
+
+    .moment-container {
+        border-bottom: 1px solid rgba(white, 0.5);
+        padding: 0 15px 15px;
+        margin-bottom: 20px;
+        
+        img {
+            max-width: 100%;
+            border-radius: 999px;
+            border: 3px solid white;
+        }
+    }
+}

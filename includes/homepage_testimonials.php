@@ -14,10 +14,10 @@
                         <?php $testimonialCount++; endwhile; ?>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <i class="icon-left-open-big"></i>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <i class="icon-right-open-big"></i>
                     </a>
                 </div>
             </div>
@@ -27,8 +27,9 @@
                 <div class="row">
                     <?php while( have_rows('video_about_url') ): the_row(); ?>
                         <div class="col-sm-4">
-                            <?php the_sub_field('url'); ?>
-                            <?php the_sub_field('image'); ?>
+                            <a href="<?php the_sub_field('url'); ?>" class="video" target="_blank">
+                                <img src="<?php the_sub_field('image'); ?>" />
+                            </a>
                         </div>
                     <?php endwhile; ?>
                 </div>

@@ -80,9 +80,21 @@ a {
         opacity: 0.65;
     }
     &.underline {
+        font-weight: 700;
         border-bottom: 1px dashed $cfar-midblue;
     }
     &.text-center {
         display: inline-block;
+    }
+}
+
+.btn {
+    border: none;
+    border-radius: 0;
+    font-weight: 700;
+
+    &.btn-primary {
+        background: $cfar-lightorange;
+        color: white;
     }
 }

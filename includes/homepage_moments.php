@@ -1,11 +1,12 @@
 <section class="homepage-moments">
     <div class="container">
 		<div class="row">
-            <div class="col-sm-10 col-sm-offset-1">
-                <h3><?php the_field('moment_title'); ?></h3>
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <h3 class="text-center"><?php the_field('moment_title'); ?></h3>
                 <p><?php the_field('moment_description'); ?></p>
+                <div class="moments">
                 <?php
-                    $default = 'http://staging.interactivemechanics.com/themoment/wp-content/themes/themoment/images/default-profile%402x.png';
+                    $default = get_template_directory_uri() . '/images/default-profile%402x.png';
                     $args = array(
                         'number' => '2',
                         'post_id' => 14,
@@ -18,11 +19,16 @@
                             $author = $comment->comment_author;
                             $content = $comment->comment_content;
                         ?>
-                        <img src="<?php echo $image; ?>" alt="<?php echo $author; ?>" />
-                        <p class="moment"><?php echo $content; ?></p>
+                        <div class="moment-container">
+                            <div class="row">
+                                <div class="col-sm-2 col-lg-1"><img src="<?php echo $image; ?>" alt="<?php echo $author; ?>" /></div>
+                                <div class="col-sm-10 col-lg-11"><p class="moment"><?php echo $content; ?></p></div>
+                            </div>
+                        </div>
                 <?php endforeach; ?>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments">Read all "Unignorable Moments"</a>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments/#add-a-moment">+&nbsp;&nbsp;Add a Moment</a>
+                </div>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments" class="underline">Read all "Unignorable Moments"</a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments/#add-a-moment" class="btn btn-primary btn-sm pull-right">+&nbsp;&nbsp;Add a Moment</a>
             </div>
 		</div>
     </div>

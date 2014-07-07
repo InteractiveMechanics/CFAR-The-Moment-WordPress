@@ -14,3 +14,38 @@ hr.divider {
     background: url('../images/divider@2x.png');
     background-size: 100%;
 }
+
+.content {
+    padding: 40px 0 80px;
+
+    .content-padding {
+        padding: 25px;
+        border-bottom: 1px solid $cfar-lightgray;
+        
+        &:first-of-type {
+            padding-top: 5px;
+        }
+        &:last-of-type {
+            border: none;
+        }
+    }
+}
+
+.popover {
+    border-color: transparent;
+
+    .arrow {
+        border-color: transparent !important;
+    }
+    .popover-content {
+        padding: 12px 18px;
+    }
+
+    ul {
+        li {
+            a {
+
+            }
+        }
+    }
+}

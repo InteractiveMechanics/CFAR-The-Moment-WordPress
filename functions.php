@@ -51,7 +51,7 @@
     // Change the excerpt "read more" tags
     function new_excerpt_more($more) {
         global $post;
-        return '<a class="read-more" href="'. get_permalink($post->ID) . '">Read more&nbsp;&nbsp;&raquo;</a>';
+        return '&nbsp;&nbsp;<a class="read-more underline" href="'. get_permalink($post->ID) . '">Read more&nbsp;&nbsp;&raquo;</a>';
     }
     add_filter('excerpt_more', 'new_excerpt_more');
 

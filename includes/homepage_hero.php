@@ -1,10 +1,10 @@
 <section class="homepage-hero">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-sm-offset-1">
+			<div class="col-sm-5 col-md-4 col-md-offset-1">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/book-cover@2x.png" class="book-cover" alt="The Moment You Can't Ignore by Mal O'Connor and Barry Dornfeld" />
 			</div>
-            <div class="col-sm-6">
+            <div class="col-sm-7 col-md-6">
                 <h1>
                     Leaders today face four fundamental questions:
                 </h1>
@@ -17,12 +17,16 @@
                 </div>
                 <?php endif; ?>
                 <div class="buttons">
-                    <a class="btn btn-large btn-primary">Purchase the book</a>
-                    <?php if( have_rows('hero_purchase_links') ): while( have_rows('hero_purchase_links') ): the_row(); ?>
-                        <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('site'); ?></a>
-                    <?php endwhile; endif; ?>
+                    <?php if( have_rows('hero_purchase_links') ): ?>
+                    <select id="purchase-button">
+                        <?php while( have_rows('hero_purchase_links') ): the_row(); ?>
+                            <option value="<?php echo the_sub_field('url'); ?>"><?php echo the_sub_field('site'); ?></option>
+                        <?php endwhile; ?>
+                    </select>
+                    <?php endif; ?>
+
                     <?php if(get_field('hero_download')): ?>
-                        <a href="<?php the_field('hero_download'); ?>" class="btn btn-large btn-primary">Download a chapter</a>
+                        <a href="<?php the_field('hero_download'); ?>" class="btn btn-lg btn-primary">Download a chapter</a>
                     <?php endif; ?>
                 </div>
 			</div>

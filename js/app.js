@@ -22,7 +22,7 @@ $(document).ready(function(){
  
             var c = content.substr(0, showChar);
             var h = content.substr(showChar-1, content.length - showChar);
-            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink underline">' + moretext + '</a></span>';
  
             $(this).html(html);
             $(this).find('.moreellipses' && '.morecontent > span').hide();
@@ -57,5 +57,12 @@ $(document).ready(function(){
         setTimeout(homepageAnimate, timer);
     }
     setTimeout(homepageAnimate, timer);
+
+    // Purchase select list
+    $('#purchase-button').selectOrDie({
+        linksExternal: true,
+        placeholder: "Purchase the book",
+        customClass: "no_highlight"
+    });
 
 });

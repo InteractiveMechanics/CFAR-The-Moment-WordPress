@@ -7,11 +7,12 @@
             <div class="col-sm-10 col-sm-offset-1">
                 <h2>
                     <?php the_title(); ?>
-                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-a-moment">+&nbsp;&nbsp;Add a Moment</a>
+                    <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#add-a-moment">+&nbsp;&nbsp;Add a Moment</a>
                 </h2>
                 <div id="success" class="alert alert-success" style="display:none;">Your moment was successful submitted. It will appear here once approved.</div>
+                <div class="moments moment-page">
                 <?php
-                    $default = 'http://staging.interactivemechanics.com/themoment/wp-content/themes/themoment/images/default-profile%402x.png';
+                    $default = get_template_directory_uri() . '/images/default-profile%402x.png';
                     $args = array(
                         'status' => 'approve',
                     );
@@ -22,9 +23,14 @@
                             $author = $comment->comment_author;
                             $content = $comment->comment_content;
                         ?>
-                        <img src="<?php echo $image; ?>" alt="<?php echo $author; ?>" />
-                        <p class="moment"><?php echo $content; ?></p>
+                        <div class="moment-container">
+                            <div class="row">
+                                <div class="col-sm-2 col-lg-1"><img src="<?php echo $image; ?>" alt="<?php echo $author; ?>" /></div>
+                                <div class="col-sm-10 col-lg-11"><p class="moment"><?php echo $content; ?></p></div>
+                            </div>
+                        </div>
                 <?php endforeach; ?>
+                </div>
             </div>
         </div>
     </div>
