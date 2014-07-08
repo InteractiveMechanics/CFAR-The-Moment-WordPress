@@ -15,10 +15,22 @@
     @media #{$screen-sm} {
         height: 440px;
     }
+    @media #{$screen-xs} {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 420px;
+    }
 
     img.book-cover {
         max-width: 90%;
         margin-top: 50px;
+
+        @media #{$screen-xs} {
+            margin: 30px auto 0;
+            display: block;
+            max-width: 260px;
+            width: 100%;
+        }
     }
     h1 {
         margin-top: 100px;
@@ -28,10 +40,18 @@
 
         @media #{$screen-md} {
             font-size: 3.6rem;
+            line-height: 4.2rem;
         }
         @media #{$screen-sm} {
-            font-size: 3.6rem;
-            margin-top: 80px;
+            font-size: 3.2rem;
+            line-height: 4.2rem;
+            margin-top: 75px;
+        }
+        @media #{$screen-xs} {
+            margin-top: 30px;
+            font-size: 3.2rem;
+            line-height: 4.2rem;
+            display: none;
         }
     }
 
@@ -58,6 +78,9 @@
         @media #{$screen-sm} {
             margin-top: 70px;
         }
+        @media #{$screen-xs} {
+            margin-top: 20px;
+        }
 
         .sod_select {
             width: 220px;
@@ -77,10 +100,18 @@
             &:before {
                 top: 16px;
                 right: 16px;
+
+                @media #{$screen-sm} {
+                    top: 14px;
+                }
             }
             &:after {
                 bottom: 16px;
                 right: 16px;
+                
+                @media #{$screen-sm} {
+                    bottom: 14px;
+                }
             }
             &:hover, &:focus {
                 background: $cfar-orange;
@@ -88,6 +119,19 @@
             
             .sod_label {
                 font-size: 1.6rem;
+
+                @media #{$screen-sm} {
+                    font-size: 1.4rem;
+                }
+            }
+            
+            @media #{$screen-sm} {
+                font-size: 1.4rem;
+                width: 190px;
+                padding: 14px 20px;
+            }
+            @media #{$screen-xs} {
+                width: 100%;
             }
         }
         .sod_list {
@@ -96,6 +140,13 @@
             width: 220px;
             margin-top: 5px;
             left: 3px;
+
+            @media #{$screen-sm} {
+                width: 190px
+            }
+            @media #{$screen-xs} {
+                width: 100%;
+            }
 
             li {
                 color: white;
@@ -111,6 +162,10 @@
                 &.active {
                     background: $cfar-orange;
                 }
+
+                @media #{$screen-sm} {
+                    font-size: 1.4rem;
+                }
             }
         }
 
@@ -123,12 +178,26 @@
                 opacity: 1;
                 background: $cfar-orange;
             }
+
+            @media #{$screen-sm} {
+                font-size: 1.4rem;
+                padding: 14px 20px;
+                margin-top: -10px;
+            }
+            @media #{$screen-xs} {
+                width: 100%;
+                margin-top: 8px;
+            }
         }
     }
 }
 
 .homepage-about {
-    padding: 100px 0;
+    padding: 80px 0;
+
+    @media #{$screen-xs} {
+        padding: 250px 10px 0;
+    }
 
     h5 {
         text-align: center;
@@ -144,12 +213,24 @@
             display: block;
             margin: 20px auto 30px;
         }
+
+        @media #{$screen-xs} {
+            &:last-of-type {
+                margin-top: 40px;
+            }
+        }
     }
     .author-video {
         position: relative;
         margin-top: 40px;
         display: block;
         margin-bottom: -100px;
+
+        @media #{$screen-xs} {
+            margin-bottom: 0;
+            margin-left: -25px;
+            margin-right: -25px;
+        }
 
         img {
             max-width: 100%;
@@ -159,7 +240,13 @@
             color: white;
             top: 40%;
             text-align: center;
-            width: 100%;        
+            width: 100%;
+
+            @media #{$screen-xs} {
+                font-size: 2.1rem;
+                padding: 0 15px;
+                top: 30%;
+            }
         }
     }
 }
@@ -191,6 +278,10 @@
         border-bottom: $cfar-lightblue 16px solid;
     }
 
+    @media #{$screen-xs} {
+        padding: 30px 10px;
+    }
+
     h3 {
         color: white;
         margin-bottom: 25px;
@@ -211,12 +302,18 @@
     background: $cfar-darkblue;
     color: white;
 
+    .carousel {
+        margin: 0 -15px;
+    }
     .carousel-inner {
         .item {
             padding: 0 20% 40px;
 
             @media #{$screen-sm} {
                 padding: 0 15% 40px;
+            }
+            @media #{$screen-xs} {
+                padding: 0 12% 20px;
             }
 
             h5 > p {
@@ -254,6 +351,10 @@
                     font-size: 1.8rem;
                     line-height: 3.6rem;
                 }
+                @media #{$screen-xs} {
+                    margin-left: 0;
+                    font-size: 1.8rem;
+                }
             }
             > p {
                 font-size: 1.4rem;
@@ -263,6 +364,9 @@
                 @media #{$screen-sm} {
                     font-size: 1.2rem;
                     line-height: 1.8rem;
+                }
+                @media #{$screen-xs} {
+                    margin-left: 0;
                 }
             }
         }
@@ -275,12 +379,29 @@
         &:hover {
             opacity: 1;
         }
+        &.left {
+            @media #{$screen-xs} {
+                > i {
+                    left: -5px;
+                }
+            }
+        }
+
+        @media #{$screen-xs} {
+            width: 30px;
+        }
 
         > i {
             font-size: 4.2rem;
             top: 30%;
             position: absolute;
             right: 0;
+
+            @media #{$screen-xs} {
+                font-size: 3rem;
+                top: 35%;
+                right: -5px;
+            }
         }
     }
     .video {
@@ -334,6 +455,10 @@
 .homepage-resources {
     padding: 140px 0 100px;
 
+    @media #{$screen-xs} {
+        padding: 110px 10px 80px;
+    }
+
     h3 {
         color: $cfar-darkblue;
         margin-bottom: 25px;
@@ -341,6 +466,10 @@
     h4 {
         font-size: 2.4rem;
         line-height: 3rem;
+
+        @media #{$screen-xs} {
+            margin-top: 0;
+        }
     }
     h5 {
         text-align: center;
@@ -348,11 +477,22 @@
     }
     h6 {
         color: lighten($cfar-midgray, 15%);
+
+        @media #{$screen-xs} {
+            margin-bottom: 5px;
+        }
     }
 
     .vr {
         border-left: 1px solid $cfar-lightgray;
         padding: 2px 0 2px 40px;
+
+        @media #{$screen-xs} {
+            border: none;
+            padding: 15px 0 0;
+            margin-top: 25px;
+            border-top: 1px solid $cfar-lightgray;
+        }
 
         h4 {
             font-size: 2.1rem;

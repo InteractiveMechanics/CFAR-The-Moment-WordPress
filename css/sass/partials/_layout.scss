@@ -13,14 +13,31 @@ hr.divider {
     border: none;
     background: url('../images/divider@2x.png');
     background-size: 100%;
+
+    @media #{$screen-xs} {
+        margin: 40px auto;
+    }
+}
+
+#wrapper {
+    overflow: hidden;    
 }
 
 .content {
     padding: 40px 0 80px;
 
+    @media #{$screen-xs} {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .content-padding {
         padding: 25px;
         border-bottom: 1px solid $cfar-lightgray;
+
+        @media #{$screen-xs} {
+            padding: 25px 0;
+        }
         
         &:first-of-type {
             padding-top: 5px;

@@ -15,10 +15,18 @@ section.stay-connected {
         position: absolute;
         margin-left: -8px;
     }
+
+    @media #{$screen-xs} {
+        padding: 40px 10px;
+    }
     
     h3 {
         margin: 0 0 10px;
         color: white;
+
+        @media #{$screen-xs} {
+            font-size: 2.1rem;
+        }
     }
     p {
         color: white;
@@ -69,6 +77,12 @@ section.stay-connected {
     }
 
     #mc_embed_signup {
+        @media #{$screen-xs} {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+
         input[type="email"] {
             border: none;
             border-radius: 0;
@@ -98,6 +112,10 @@ footer {
         > img {
             max-width: 200px;
             width: 100%;
+
+            @media #{$screen-xs} {
+                margin-bottom: 15px;
+            }
         }
     }
     p {

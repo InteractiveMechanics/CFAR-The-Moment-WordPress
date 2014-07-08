@@ -8,9 +8,20 @@
     .article {
         padding: 5px 25px 25px;
 
+        @media #{$screen-xs} {
+            padding: 5px 0 0;
+        }
+
         p {
             font-size: 1.6rem;
             line-height: 3rem;
         }
+    }
+}
+
+[data-target="#add-a-moment"] {
+    @media #{$screen-xs} {
+        float: none !important;
+        margin-top: 8px;
     }
 }
