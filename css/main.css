@@ -181,18 +181,21 @@ header nav.navbar {
       padding-top: 24px;
       padding-bottom: 26px;
       color: white;
-      opacity: 1;
+      opacity: 0.5;
       transition: all 0.5s; }
-      @media (max-width: 767px) {
-        header nav.navbar .navbar-nav > li > a:hover {
-          background: #1a2554; } }
+      header nav.navbar .navbar-nav > li > a:hover {
+        opacity: 1; }
+        @media (max-width: 767px) {
+          header nav.navbar .navbar-nav > li > a:hover {
+            background: #1a2554; } }
       @media (max-width: 767px) {
         header nav.navbar .navbar-nav > li > a {
           padding-top: 15px;
           padding-bottom: 15px;
           margin: 0 -15px 0 0;
           background: #4e84bf;
-          border-bottom: 1px solid #739ecd; } }
+          border-bottom: 1px solid #739ecd;
+          opacity: 1; } }
     header nav.navbar .navbar-nav > li.current-menu-item > a {
       color: white;
       opacity: 1; }
@@ -524,7 +527,8 @@ footer {
   .homepage-moments a {
     color: white; }
     .homepage-moments a.underline {
-      border-bottom-color: white; }
+      border-bottom-color: white;
+      display: inline-block !important; }
 
 .homepage-testimonials {
   padding: 80px 0;
