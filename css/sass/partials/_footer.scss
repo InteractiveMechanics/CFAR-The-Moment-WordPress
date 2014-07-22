@@ -30,6 +30,7 @@ section.stay-connected {
     }
     p {
         color: white;
+        line-height: 2.4rem;
     }
     ul {
         list-style: none;
@@ -120,6 +121,7 @@ footer {
     }
     p {
         font-size: 1.2rem;
+        line-height: 2.4rem;
         color: lighten($cfar-midgray, 15%);
 
         @media #{$screen-sm} {

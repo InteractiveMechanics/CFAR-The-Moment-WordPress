@@ -113,7 +113,7 @@
 	        'hierarchical' => false,
 	        'description' => 'All resources',
 	        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-	        'taxonomies' => array( '' ),
+	        'taxonomies' => array( 'category' ),
 	        'public' => true,
 	        'show_ui' => true,
 	        'show_in_menu' => true,

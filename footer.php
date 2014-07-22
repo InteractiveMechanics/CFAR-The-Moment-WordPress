@@ -19,10 +19,10 @@
                 <div class="col-sm-5 col-sm-offset-1">
                     <h3>Stay connected</h3>
                     <ul>
-                        <li><a href="info@cfar.com" target="_blank">
+                        <li><a href="unignorablemoment@cfar.com" target="_blank">
                             <i class="icon-cfar"></i>
                             Contact the Authors</a></li>
-                        <li><a href="https://twitter.com/CFAR_INC" target="_blank">
+                        <li><a href="https://twitter.com/UnignorableCFAR" target="_blank">
                             <i class="icon-twitter"></i>
                             Follow us on Twitter</a></li>
                         <li><a href="http://www.linkedin.com/company/cfar" target="_blank">

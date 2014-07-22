@@ -35,7 +35,7 @@
                     <div class="col-sm-5 col-md-5 col-lg-4">
                         <div class="vr">
                             <h3>Resources 
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>what-to-do" class="view-all">view all &raquo;</a>
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>resources" class="view-all">view all &raquo;</a>
                             </h3>
                             <?php 
                                 $resourceArgs = array(
@@ -43,7 +43,7 @@
                                     'post_type' => 'resource' ); 
                                 $resources = get_posts( $resourceArgs );
                                 foreach ( $resources as $post ) : setup_postdata( $post ); ?>
-                                <h6><?php the_field('author'); ?></h6>
+                                <span class="label label-success"><?php $cat = get_the_category(); echo $cat[0]->name; ?></span>
                                 <h4><a href="<?php the_field('resource_url'); ?>" target="_blank"><?php the_title(); ?></a></h4>
                             <?php endforeach; wp_reset_postdata();?>
                         </div>

@@ -35,7 +35,6 @@
                         </div>
                     <?php endforeach; wp_reset_postdata(); ?>
                 </div>
-                <hr class="divider">
                 <h4 class="text-muted">Older Events</h4>
                 <hr>
                 <div>
