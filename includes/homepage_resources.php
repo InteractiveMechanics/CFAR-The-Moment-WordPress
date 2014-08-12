@@ -10,7 +10,7 @@
                         <?php 
                             $today = date('Ymd');
                             $newsArgs = array(
-                                'number_of_posts' => 3,
+                                'numberposts' => 3,
                                 'post_type' => 'event',
                                 'meta_query' => array(
                                     array(
@@ -39,11 +39,12 @@
                             </h3>
                             <?php 
                                 $resourceArgs = array(
-                                    'number_of_posts' => 3,
+                                    'numberposts' => 3,
                                     'post_type' => 'resource' ); 
                                 $resources = get_posts( $resourceArgs );
                                 foreach ( $resources as $post ) : setup_postdata( $post ); ?>
-                                <span class="label label-success"><?php $cat = get_the_category(); echo $cat[0]->name; ?></span>
+                                <?php $cat = get_the_category(); ?>
+                                <span class="label label-default <?php echo $cat[0]->slug; ?>"><?php echo $cat[0]->name; ?></span>
                                 <h4><a href="<?php the_field('resource_url'); ?>" target="_blank"><?php the_title(); ?></a></h4>
                             <?php endforeach; wp_reset_postdata();?>
                         </div>

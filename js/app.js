@@ -65,4 +65,11 @@ $(document).ready(function(){
         customClass: "no_highlight"
     });
 
+    $('#filters .label').on('click', function(e){
+        e.stopPropogation;
+        var filtercat = $(this).attr('href');
+
+        $(this).toggleClass('inactive');
+        $('#resources .resource[data-cat="' + filtercat + '"]').fadeToggle(400);
+    });
 });

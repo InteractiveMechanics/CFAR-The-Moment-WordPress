@@ -19,6 +19,18 @@
     }
 }
 
+#filters {
+    margin-top: -25px;
+
+    .label {
+        font-size: 1.4rem;
+
+        &.inactive {
+            background: #AAA;
+        }
+    }
+}
+
 [data-target="#add-a-moment"] {
     @media #{$screen-xs} {
         float: none !important;

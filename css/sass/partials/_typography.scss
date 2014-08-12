@@ -98,3 +98,26 @@ a {
         color: white;
     }
 }
+
+.label {
+    &.culture {
+        background: #f1c34a;
+
+        &:hover { background: darken(#f1c34a, 15%); }
+    }
+    &.coalitions {
+        background: #8d9ace;
+        
+        &:hover { background: darken(#8d9ace, 15%); }
+    }
+    &.change {
+        background: #76c9b8;
+        
+        &:hover { background: darken(#76c9b8, 15%); }
+    }
+    &.leadership {
+        background: #92c83d;
+        
+        &:hover { background: darken(#92c83d, 15%); }
+    }
+}

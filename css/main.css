@@ -127,6 +127,23 @@ a {
     background: #fcb514;
     color: white; }
 
+.label.culture {
+  background: #f1c34a; }
+  .label.culture:hover {
+    background: #dda511; }
+.label.coalitions {
+  background: #8d9ace; }
+  .label.coalitions:hover {
+    background: #576bb7; }
+.label.change {
+  background: #76c9b8; }
+  .label.change:hover {
+    background: #45ae98; }
+.label.leadership {
+  background: #92c83d; }
+  .label.leadership:hover {
+    background: #689029; }
+
 header nav.navbar {
   border-radius: 0;
   background: #4e84bf;
@@ -659,7 +676,8 @@ footer {
     margin-bottom: 25px; }
   .homepage-resources h4 {
     font-size: 2.4rem;
-    line-height: 3rem; }
+    line-height: 3rem;
+    margin: 0 0 8px; }
     @media (max-width: 767px) {
       .homepage-resources h4 {
         margin-top: 0; } }
@@ -682,7 +700,8 @@ footer {
         border-top: 1px solid #f1f1f2; } }
     .homepage-resources .vr h4 {
       font-size: 2.1rem;
-      line-height: 2.7rem; }
+      line-height: 2.7rem;
+      margin: 8px 0 20px; }
       .homepage-resources .vr h4 a {
         color: #231f20; }
 
@@ -696,6 +715,13 @@ footer {
   .single .article p {
     font-size: 1.6rem;
     line-height: 3rem; }
+
+#filters {
+  margin-top: -25px; }
+  #filters .label {
+    font-size: 1.4rem; }
+    #filters .label.inactive {
+      background: #AAA; }
 
 @media (max-width: 767px) {
   [data-target="#add-a-moment"] {
