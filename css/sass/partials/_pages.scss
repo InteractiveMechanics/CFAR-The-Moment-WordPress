@@ -33,7 +33,6 @@
 
 [data-target="#add-a-moment"] {
     @media #{$screen-xs} {
-        float: none !important;
-        margin-top: 8px;
+        display: none;
     }
 }

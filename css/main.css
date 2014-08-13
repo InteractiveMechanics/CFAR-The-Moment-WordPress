@@ -556,58 +556,60 @@ footer {
   color: white; }
   .homepage-testimonials .carousel {
     margin: 0 -15px; }
-  .homepage-testimonials .carousel-inner .item {
-    padding: 0 20% 40px; }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .homepage-testimonials .carousel-inner .item {
-        padding: 0 15% 40px; } }
-    @media (max-width: 767px) {
-      .homepage-testimonials .carousel-inner .item {
-        padding: 0 12% 20px; } }
-    .homepage-testimonials .carousel-inner .item h5 > p {
-      font-family: "Volkhov", "Georgia", serif;
-      font-size: 2.4rem;
-      font-style: italic;
-      font-weight: 400;
-      line-height: 3.6rem;
-      letter-spacing: -0.3px;
-      color: white;
-      text-transform: none;
-      margin-bottom: 15px; }
+  .homepage-testimonials .carousel-inner {
+    min-height: 350px; }
+    .homepage-testimonials .carousel-inner .item {
+      padding: 0 20% 40px; }
       @media (min-width: 768px) and (max-width: 991px) {
-        .homepage-testimonials .carousel-inner .item h5 > p {
-          font-size: 2.1rem;
-          margin-bottom: 20px; } }
-      .homepage-testimonials .carousel-inner .item h5 > p strong {
+        .homepage-testimonials .carousel-inner .item {
+          padding: 0 15% 40px; } }
+      @media (max-width: 767px) {
+        .homepage-testimonials .carousel-inner .item {
+          padding: 0 12% 20px; } }
+      .homepage-testimonials .carousel-inner .item h5 > p {
+        font-family: "Volkhov", "Georgia", serif;
         font-size: 2.4rem;
-        color: #fcb514; }
+        font-style: italic;
+        font-weight: 400;
+        line-height: 3.6rem;
+        letter-spacing: -0.3px;
+        color: white;
+        text-transform: none;
+        margin-bottom: 15px; }
         @media (min-width: 768px) and (max-width: 991px) {
-          .homepage-testimonials .carousel-inner .item h5 > p strong {
-            font-size: 2.1rem; } }
-    .homepage-testimonials .carousel-inner .item > strong {
-      font-weight: 700;
-      font-size: 2.1rem;
-      margin-bottom: 5px;
-      margin-left: 30%; }
-      @media (min-width: 768px) and (max-width: 991px) {
-        .homepage-testimonials .carousel-inner .item > strong {
-          font-size: 1.8rem;
-          line-height: 3.6rem; } }
-      @media (max-width: 767px) {
-        .homepage-testimonials .carousel-inner .item > strong {
-          margin-left: 0;
-          font-size: 1.8rem; } }
-    .homepage-testimonials .carousel-inner .item > p {
-      font-size: 1.4rem;
-      color: #75a0cd;
-      margin-left: 30%; }
-      @media (min-width: 768px) and (max-width: 991px) {
-        .homepage-testimonials .carousel-inner .item > p {
-          font-size: 1.2rem;
-          line-height: 1.8rem; } }
-      @media (max-width: 767px) {
-        .homepage-testimonials .carousel-inner .item > p {
-          margin-left: 0; } }
+          .homepage-testimonials .carousel-inner .item h5 > p {
+            font-size: 2.1rem;
+            margin-bottom: 20px; } }
+        .homepage-testimonials .carousel-inner .item h5 > p strong {
+          font-size: 2.4rem;
+          color: #fcb514; }
+          @media (min-width: 768px) and (max-width: 991px) {
+            .homepage-testimonials .carousel-inner .item h5 > p strong {
+              font-size: 2.1rem; } }
+      .homepage-testimonials .carousel-inner .item > strong {
+        font-weight: 700;
+        font-size: 2.1rem;
+        margin-bottom: 5px;
+        margin-left: 30%; }
+        @media (min-width: 768px) and (max-width: 991px) {
+          .homepage-testimonials .carousel-inner .item > strong {
+            font-size: 1.8rem;
+            line-height: 3.6rem; } }
+        @media (max-width: 767px) {
+          .homepage-testimonials .carousel-inner .item > strong {
+            margin-left: 0;
+            font-size: 1.8rem; } }
+      .homepage-testimonials .carousel-inner .item > p {
+        font-size: 1.4rem;
+        color: #75a0cd;
+        margin-left: 30%; }
+        @media (min-width: 768px) and (max-width: 991px) {
+          .homepage-testimonials .carousel-inner .item > p {
+            font-size: 1.2rem;
+            line-height: 1.8rem; } }
+        @media (max-width: 767px) {
+          .homepage-testimonials .carousel-inner .item > p {
+            margin-left: 0; } }
   .homepage-testimonials .carousel-control {
     background: none;
     width: 60px;
@@ -630,39 +632,81 @@ footer {
           font-size: 3rem;
           top: 35%;
           right: -5px; } }
-  .homepage-testimonials .video:hover {
-    opacity: 1; }
-    .homepage-testimonials .video:hover:after {
-      opacity: 0.75; }
-  .homepage-testimonials .video:after {
-    content: '\e89c';
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    font-size: 7.2rem;
-    position: absolute;
-    left: 50%;
-    margin-left: -25px;
-    color: white;
-    opacity: 0.35;
-    top: 80px;
-    transition: all 0.5s; }
-    @media (min-width: 992px) and (max-width: 1199px) {
-      .homepage-testimonials .video:after {
-        top: 65px; } }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .homepage-testimonials .video:after {
-        top: 48px; } }
-  .homepage-testimonials .video img {
-    max-width: 100%;
+  .homepage-testimonials .video {
+    position: relative;
+    display: block;
     margin-bottom: -150px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    height: 225px;
+    overflow: hidden; }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .homepage-testimonials .video {
+        height: 183px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .homepage-testimonials .video {
+        height: 138px; } }
+    @media (max-width: 767px) {
+      .homepage-testimonials .video {
+        margin-bottom: 20px;
+        margin-top: 0;
+        height: 200px; } }
+    .homepage-testimonials .video:hover {
+      opacity: 1; }
+      .homepage-testimonials .video:hover .overlay {
+        opacity: 1; }
+    .homepage-testimonials .video:after {
+      content: '\e89c';
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      font-size: 7.2rem;
+      position: absolute;
+      left: 50%;
+      margin-left: -25px;
+      color: white;
+      opacity: 0.35;
+      top: 60px;
+      transition: all 0.5s; }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .homepage-testimonials .video:after {
+          top: 42px; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .homepage-testimonials .video:after {
+          top: 20px; } }
+    .homepage-testimonials .video img {
+      max-width: 100%; }
+    .homepage-testimonials .video .overlay {
+      position: absolute;
+      top: 0;
+      height: 225px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: rgba(252, 181, 20, 0.5);
+      opacity: 0;
+      transition: all 0.5s;
+      color: white;
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center; }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .homepage-testimonials .video .overlay {
+          height: 183px;
+          font-size: 2.4rem; } }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .homepage-testimonials .video .overlay {
+          height: 138px;
+          font-size: 2.1rem; } }
+      @media (max-width: 767px) {
+        .homepage-testimonials .video .overlay {
+          height: 200px;
+          font-size: 2.4rem; } }
   .homepage-testimonials hr {
     border-top: 1px solid rgba(255, 255, 255, 0.35); }
 
@@ -670,7 +714,7 @@ footer {
   padding: 140px 0 100px; }
   @media (max-width: 767px) {
     .homepage-resources {
-      padding: 110px 10px 80px; } }
+      padding: 60px 10px 80px; } }
   .homepage-resources h3 {
     color: #1a2554;
     margin-bottom: 25px; }
@@ -725,8 +769,7 @@ footer {
 
 @media (max-width: 767px) {
   [data-target="#add-a-moment"] {
-    float: none !important;
-    margin-top: 8px; } }
+    display: none; } }
 
 .moments {
   margin: 20px 0 0;

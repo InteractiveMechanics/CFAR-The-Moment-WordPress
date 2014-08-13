@@ -29,6 +29,9 @@
                         <div class="col-sm-4">
                             <a href="<?php the_sub_field('url'); ?>" class="video" target="_blank">
                                 <img src="<?php the_sub_field('image'); ?>" />
+                                <div class="overlay">
+                                    <?php the_sub_field('title'); ?>
+                                </div>
                             </a>
                         </div>
                     <?php endwhile; ?>

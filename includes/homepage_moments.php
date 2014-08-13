@@ -28,7 +28,7 @@
                 <?php endforeach; ?>
                 </div>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments" class="underline hidden-xs">Read all "Unignorable Moments"</a>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments/#add-a-moment" class="btn btn-primary btn-sm pull-right">+&nbsp;&nbsp;Add a Moment</a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>moments/#add-a-moment" class="btn btn-primary btn-sm pull-right hidden-xs">+&nbsp;&nbsp;Add a Moment</a>
             </div>
 		</div>
     </div>
