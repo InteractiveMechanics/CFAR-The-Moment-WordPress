@@ -1,0 +1,22 @@
+// Partials: Comments
+
+#comments {
+    ol.commentlist {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        > li {
+            margin-bottom: 8px;
+        }
+
+        .vcard {
+            img {
+                display: none;
+            }
+        }
+        .reply {
+            display: none;
+        }
+    }
+}

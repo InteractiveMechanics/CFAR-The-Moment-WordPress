@@ -759,6 +759,18 @@ footer {
   .single .article p {
     font-size: 1.6rem;
     line-height: 3rem; }
+.single .list-icons {
+  margin-bottom: 35px; }
+  .single .list-icons a {
+    background: #4e84bf;
+    width: 42px;
+    height: 42px;
+    font-size: 2.1rem;
+    color: white;
+    display: block;
+    padding: 5px 0;
+    border-radius: 999px;
+    overflow: hidden; }
 
 #filters {
   margin-top: -25px; }
@@ -807,3 +819,14 @@ footer {
       @media (max-width: 767px) {
         .moments .moment-container img {
           display: none; } }
+
+#comments ol.commentlist {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #comments ol.commentlist > li {
+    margin-bottom: 8px; }
+  #comments ol.commentlist .vcard img {
+    display: none; }
+  #comments ol.commentlist .reply {
+    display: none; }
