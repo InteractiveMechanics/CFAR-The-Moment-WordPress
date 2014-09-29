@@ -401,7 +401,8 @@ footer {
       cursor: pointer;
       margin-right: 8px;
       line-height: 1.33;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      vertical-align: bottom; }
       .homepage-hero .buttons .sod_select:before {
         top: 16px;
         right: 16px; }
@@ -457,7 +458,8 @@ footer {
     .homepage-hero .buttons .btn-lg {
       padding: 17px 25px;
       font-size: 1.6rem;
-      margin-top: -14px; }
+      margin-top: -14px;
+      vertical-align: bottom; }
       .homepage-hero .buttons .btn-lg:hover {
         opacity: 1;
         background: #ef8a22; }
@@ -514,31 +516,13 @@ footer {
           top: 30%; } }
 
 .homepage-moments {
-  padding: 80px 0;
+  padding: 140px 0 80px;
   background: #75a0cd;
   color: white;
   position: relative; }
-  .homepage-moments:before {
-    content: '';
-    position: absolute;
-    top: -16px;
-    left: 0;
-    right: 50%;
-    height: 16px;
-    border-right: transparent 16px solid;
-    border-bottom: #75a0cd 16px solid; }
-  .homepage-moments:after {
-    content: '';
-    position: absolute;
-    top: -16px;
-    right: 0;
-    left: 50%;
-    height: 16px;
-    border-left: transparent 16px solid;
-    border-bottom: #75a0cd 16px solid; }
   @media (max-width: 767px) {
     .homepage-moments {
-      padding: 30px 10px; } }
+      padding: 30px 10px 50px; } }
   .homepage-moments h3 {
     color: white;
     margin-bottom: 25px; }
@@ -553,7 +537,27 @@ footer {
 .homepage-testimonials {
   padding: 80px 0;
   background: #1a2554;
-  color: white; }
+  color: white;
+  position: relative;
+  z-index: 2; }
+  .homepage-testimonials:before {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 0;
+    right: 50%;
+    height: 16px;
+    border-right: transparent 16px solid;
+    border-bottom: #1a2554 16px solid; }
+  .homepage-testimonials:after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    right: 0;
+    left: 50%;
+    height: 16px;
+    border-left: transparent 16px solid;
+    border-bottom: #1a2554 16px solid; }
   .homepage-testimonials .carousel {
     margin: 0 -15px; }
   .homepage-testimonials .carousel-inner {
@@ -621,7 +625,8 @@ footer {
         left: -5px; } }
     @media (max-width: 767px) {
       .homepage-testimonials .carousel-control {
-        width: 30px; } }
+        width: 30px;
+        display: none; } }
     .homepage-testimonials .carousel-control > i {
       font-size: 4.2rem;
       top: 30%;
@@ -654,31 +659,6 @@ footer {
       opacity: 1; }
       .homepage-testimonials .video:hover .overlay {
         opacity: 1; }
-    .homepage-testimonials .video:after {
-      content: '\e89c';
-      font-family: "fontello";
-      font-style: normal;
-      font-weight: normal;
-      speak: none;
-      display: inline-block;
-      text-decoration: inherit;
-      width: 1em;
-      margin-right: .2em;
-      text-align: center;
-      font-size: 7.2rem;
-      position: absolute;
-      left: 50%;
-      margin-left: -25px;
-      color: white;
-      opacity: 0.35;
-      top: 60px;
-      transition: all 0.5s; }
-      @media (min-width: 992px) and (max-width: 1199px) {
-        .homepage-testimonials .video:after {
-          top: 42px; } }
-      @media (min-width: 768px) and (max-width: 991px) {
-        .homepage-testimonials .video:after {
-          top: 20px; } }
     .homepage-testimonials .video img {
       max-width: 100%; }
     .homepage-testimonials .video .overlay {
@@ -711,7 +691,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.35); }
 
 .homepage-resources {
-  padding: 140px 0 100px; }
+  padding: 100px 0 100px; }
   @media (max-width: 767px) {
     .homepage-resources {
       padding: 60px 10px 80px; } }

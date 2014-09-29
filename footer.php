@@ -19,7 +19,7 @@
                 <div class="col-sm-5 col-sm-offset-1">
                     <h3>Stay connected</h3>
                     <ul>
-                        <li><a href="unignorablemoment@cfar.com" target="_blank">
+                        <li><a href="mailto:unignorablemoment@cfar.com" target="_blank">
                             <i class="icon-cfar"></i>
                             Contact the Authors</a></li>
                         <li><a href="https://twitter.com/UnignorableCFAR" target="_blank">

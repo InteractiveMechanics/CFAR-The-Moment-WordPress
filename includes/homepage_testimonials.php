@@ -14,10 +14,10 @@
                         <?php $testimonialCount++; endwhile; ?>
                     </div>
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <i class="icon-left-open-big"></i>
+                        <i style="font-style:normal;">&#10094;</i>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <i class="icon-right-open-big"></i>
+                        <i style="font-style:normal;">&#10095;</i>
                     </a>
                 </div>
             </div>

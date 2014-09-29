@@ -97,6 +97,7 @@
             margin-right: 8px;
             line-height: 1.33;
             transition: #{$transition};
+            vertical-align: bottom;
 
             &:before {
                 top: 16px;
@@ -174,6 +175,7 @@
             padding: 17px 25px;
             font-size: 1.6rem;
             margin-top: -14px;
+            vertical-align: bottom;
 
             &:hover {
                 opacity: 1;
@@ -253,34 +255,13 @@
 }
 
 .homepage-moments {
-    padding: 80px 0;
+    padding: 140px 0 80px;
     background: $cfar-lightblue;
     color: white;
     position: relative;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: -16px;
-        left: 0;
-        right: 50%;
-        height: 16px;
-        border-right: transparent 16px solid;
-        border-bottom: $cfar-lightblue 16px solid;
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        top: -16px;
-        right: 0;
-        left: 50%;
-        height: 16px;
-        border-left: transparent 16px solid;
-        border-bottom: $cfar-lightblue 16px solid;
-    }
-
     @media #{$screen-xs} {
-        padding: 30px 10px;
+        padding: 30px 10px 50px;
     }
 
     h3 {
@@ -303,6 +284,29 @@
     padding: 80px 0;
     background: $cfar-darkblue;
     color: white;
+    position: relative;
+    z-index: 2;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -16px;
+        left: 0;
+        right: 50%;
+        height: 16px;
+        border-right: transparent 16px solid;
+        border-bottom: $cfar-darkblue 16px solid;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: -16px;
+        right: 0;
+        left: 50%;
+        height: 16px;
+        border-left: transparent 16px solid;
+        border-bottom: $cfar-darkblue 16px solid;
+    }
 
     .carousel {
         margin: 0 -15px;
@@ -393,6 +397,7 @@
 
         @media #{$screen-xs} {
             width: 30px;
+            display: none;
         }
 
         > i {
@@ -433,33 +438,6 @@
 
             .overlay {
                 opacity: 1;
-            }
-        }
-        &:after {
-            content: '\e89c';
-            font-family: "fontello";
-            font-style: normal;
-            font-weight: normal;
-            speak: none;
-            display: inline-block;
-            text-decoration: inherit;
-            width: 1em;
-            margin-right: .2em;
-            text-align: center;
-            font-size: 7.2rem;
-            position: absolute;
-            left: 50%;
-            margin-left: -25px;
-            color: white;
-            opacity: 0.35;
-            top: 60px;
-            transition: #{$transition};
-            
-            @media #{$screen-md} {
-                top: 42px;
-            }
-            @media #{$screen-sm} {
-                top: 20px;
             }
         }
 
@@ -503,7 +481,7 @@
 }
 
 .homepage-resources {
-    padding: 140px 0 100px;
+    padding: 100px 0 100px;
 
     @media #{$screen-xs} {
         padding: 60px 10px 80px;

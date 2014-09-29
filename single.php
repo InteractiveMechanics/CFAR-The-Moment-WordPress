@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
-                <h6><?php posted_on(); ?></h6>
+                <h6><?php posted_on(); ?> by <?php the_field('author'); ?></h6>
                 <h2><?php the_title(); ?></h2>
                 <hr>
                 <div class="article">

@@ -4,8 +4,8 @@
 
     <?php include('includes/homepage_hero.php'); ?>
     <?php include('includes/homepage_about.php'); ?>
-    <?php include('includes/homepage_moments.php'); ?>
     <?php include('includes/homepage_testimonials.php'); ?>
+    <?php include('includes/homepage_moments.php'); ?>
     <?php include('includes/homepage_resources.php'); ?>
     
 <?php endwhile; endif; ?>

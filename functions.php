@@ -86,10 +86,9 @@
 
 	// Posted On
 	function posted_on() {
-		printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s by %3$s</time></a>', '' ),
+		printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time></a>', '' ),
 			esc_attr( get_the_time() ),
-			esc_attr( get_the_date() ),
-            esc_attr( get_the_author() )
+			esc_attr( get_the_date() )
 		);
 	}
 
